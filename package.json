@@ -1,0 +1,20 @@
+{
+  "name": "orbitcalculator",
+  "version": "0.5.0",
+  "description": "Un programa realizado para calcular la energia necesaria para elevar un satelite a cierta altura dependiendo del planeta donde se ubique",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Energy",
+    "calculator",
+    "satellite",
+    "orbit"
+  ],
+  "author": "Julio Perez(Flowers), Fabricio Sanchez & Alejandro",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^7.1.1"
+  }
+}
