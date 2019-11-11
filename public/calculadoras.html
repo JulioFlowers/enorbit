@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" charset="utf-8" src="plugins/cordova-plugin-inappbrowser/www/inappbrowser.js"></script>
+ <script type="text/javascript" src="./js/main.js"></script>
+ 
+<link rel="stylesheet" type="text/css" href="calculadoras.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Calculadora</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/calculadoras.css" rel="stylesheet" type="text/css">
+<link href="css/calculadoras (2).css" rel="stylesheet" type="text/css">
+</head>
+<body style="padding-top: 70px">
+<div class="container-fluid">
+        <form method="post" >
+        <ul class="UlM" id="#imc">
+        <br>
+        <p id="tipo">ti</p>
+        <p>Esta es una interfaz provicional para calcular la energia necesaria.</p>
+          <li class="liim"><label for="peso1">altura desde la superficie:</label>
+          <input type="text"  id="altura"></li>
+          <li class="liim"><label for="altura1">Masa del Satelite:</label>
+          <input type="text" id="masat"></li>
+          <li class="liim"><label for="textfield4" disabled>Resultado(J)</label>
+          <input type="number" min="0"  name="textfield4" id="res"
+           disabled></li>
+           <br>
+          <li style="text-align: center"><input class="btn btn-primary" type="button" name="Calcular" id="button"  value="Calcular." onClick="calEt()">
+            <input class="btn btn-default" type="button" name="borrar" id="button2" onClick="Reset('TMBwomen')" value="Borrar."></li>
+            <br>
+</ul>
+<br>
+        </form>
+      </div>
+</body>
+</html>
