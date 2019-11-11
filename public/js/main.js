@@ -21,16 +21,16 @@ function calEt (){
 
      function energy (massp, r){
 
-         var t = parseFloat(h)+ parseFloat(r);
+         t = parseFloat(h)+ parseFloat(r);
          Ep = (-1*G*masss*massp)/r ;
          Ec = (-1*G*masss*massp)/(2*t);
          Et = Ec-Ep;         
     
-        document.getElementById("res").value= Et;
+        return document.getElementById("res").value= Et;
 
      } 
         type ==="me" ? energy(mercury, mr): type==="ve"? energy(venus, vr):
-         type ==="ti" ? energy(earth, er): type==="ma"? energy(mars, mr):
+         type ==="ti" ? energy(earth, er): type==="ma"? energy(mars, mar):
          type ==="ju" ? energy(jupiter, jr): type==="sa"? energy(saturn, sr):
          type ==="ur" ? energy(uranus, ur): energy(neptune, nr);
 
@@ -54,13 +54,13 @@ function period(){
         s= document.getElementById("velocidad").value
 
         function per(r){
-            var t = parseFloat(h)+ parseFloat(r);
+            t = parseFloat(h)+ parseFloat(r);
             p=((t)*Math.PI*2)/s
             return document.getElementById("resp").value= p;
         }
         
         type ==="me" ? per(mr): type==="ve"? per(vr):
-         type ==="ti" ? per(er): type==="ma"? per(mr):
+         type ==="ti" ? per(er): type==="ma"? per(mar):
          type ==="ju" ? per(jr): type==="sa"? per(sr):
          type ==="ur" ? per(ur): per(nr);
 
@@ -76,7 +76,7 @@ function period(){
         masss = document.getElementById("masat").value
 
         function per1(r){
-            var t = parseFloat(h)+ parseFloat(r);
+            t = parseFloat(h)+ parseFloat(r);
             i= (4*Math.pow(Math.PI,2)*Math.pow((t),3))/(G*masss)
             p=Math.sqrt(i)
 
@@ -85,7 +85,7 @@ function period(){
         }
 
         type ==="me" ? per1(mr): type==="ve"? per1(vr):
-        type ==="ti" ? per1(er): type==="ma"? per1(mr):
+        type ==="ti" ? per1(er): type==="ma"? per1(mar):
         type ==="ju" ? per1(jr): type==="sa"? per1(sr):
         type ==="ur" ? per1(ur): per1(nr);
 
@@ -109,13 +109,13 @@ function speed(){
          var p = document.getElementById("p").value;
 
         function vel(r){
-            var t = parseFloat(h)+ parseFloat(r);
+            t = parseFloat(h)+ parseFloat(r);
             s = p/((t)*Math.PI*2)
             return document.getElementById("resv").value= s;
         }
 
         type ==="me" ? vel(mr): type==="ve"? vel(vr):
-        type ==="ti" ? vel(er): type==="ma"? vel(mr):
+        type ==="ti" ? vel(er): type==="ma"? vel(mar):
         type ==="ju" ? vel(jr): type==="sa"? vel(sr):
         type ==="ur" ? vel(ur): vel(nr);
 
@@ -131,14 +131,14 @@ function speed(){
         masss = document.getElementById("masat").value
 
         function vel1(r){
-            var t = parseFloat(h)+ parseFloat(r);
+            t = parseFloat(h)+ parseFloat(r);
             i= (G*masss)/(t)
             s=math.sqrt(i)
             return document.getElementById("resv").value= s;
         }
 
         type ==="me" ? vel1(mr): type==="ve"? vel1(vr):
-        type ==="ti" ? vel1(er): type==="ma"? vel1(mr):
+        type ==="ti" ? vel1(er): type==="ma"? vel1(mar):
         type ==="ju" ? vel1(jr): type==="sa"? vel1(sr):
         type ==="ur" ? vel1(ur): vel1(nr);
 
@@ -149,4 +149,31 @@ function speed(){
         
     }
 
+}
+
+function mascal(){
+    h= document.getElementById("altura").value
+    p= document.getElementById("p").value
+
+    function masa(r){
+        t= parseFloat(h)+parseFloat(r)  
+        masss= (4*math.pow(math.PI,2)*math.pow(t,3))/(G*math.pow(p,2)) 
+        return document.getElementById("masa").value=masss
+    }
+
+    type ==="me" ? masa(mr): type==="ve"? masa(vr):
+    type ==="ti" ? masa(er): type==="ma"? masa(mar):
+    type ==="ju" ? masa(jr): type==="sa"? masa(sr):
+    type ==="ur" ? masa(ur): masa(nr);
+
+    if (type === "od"){
+        pr = document.getElementById("pr").value;
+        masa(pr);
+     }
+
+}
+
+function Reset(id)
+{
+document.getElementById(id).reset();
 }
