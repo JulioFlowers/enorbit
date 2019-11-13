@@ -15,10 +15,10 @@
   <div>
     <div class="row"> 
       <!--Ventanas de navegacion-->
-      <div class="col-lg-3 offset-lg-1 offset-md-1 offset-sm-1 offset-1 col-3 col-sm-2 col-md-2">
+      <div class="col-lg-3 offset-lg-1 offset-md-1 offset-sm-1 offset-1 col-sm-2 col-md-2 col-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"> <a class="nav-link active" id="home-tab" data-toggle="pill" role="tab" onClick="chg('i')" >Inicio.</a> <a class="nav-link" id="mercurio-tab" data-toggle="pill" role="tab" onClick="chg('mr')">Mercurio.</a> <a class="nav-link" id="venus-tab" data-toggle="pill" role="tab" onClick="chg('v')">Venus.</a> <a class="nav-link" id="tierra-tab" data-toggle="pill" role="tab" onClick="chg('t')">Tierra.</a> <a class="nav-link" id="marte-tab" data-toggle="pill" role="tab" onClick="chg('m')">Marte.</a> <a class="nav-link" id="jupiter-tab" data-toggle="pill" role="tab" onClick="chg('j')">Jupiter.</a> <a class="nav-link" id="Saturno-tab" data-toggle="pill" role="tab" onClick="chg('s')">Saturno.</a> <a class="nav-link" id="Urano-tab" data-toggle="pill" role="tab" onClick="chg('u')">Urano.</a> <a class="nav-link" id="Neptuno-tab" data-toggle="pill" role="tab" onClick="chg('n')">Neptuno.</a> <a class="nav-link" id="otros-tab" data-toggle="pill" role="tab" onClick="chg('o')">Otros</a> </div>
       </div>
-      <div class="offset-lg-0 col-lg-7 col-7 col-sm-8 col-md-8"> 
+      <div class="offset-lg-0 col-lg-7 col-sm-8 col-md-8 col-8"> 
         
         <!--ventana inicio-->
         <div class="jumbotron" id="i" style="display: none">
@@ -32,15 +32,49 @@
 		 <!--Plantilla pa los planetas regulares-->
         <div class="jumbotron" id="mr" style="display: block">
 		  <h3>Trabajando con masa y radio de Mercurio.</h3>
-			<p>Recuerde las alturas se miden a partir de la superficie del planeta.</p>
-			<p id="me" style="display: none">me</p>
+			<p>Recuerde las alturas se miden a partir de la superficie del planeta. <strong id="me">me</strong>	</p>
+			
 		  <div class="row">
-			  <div class="col-lg-6 col-md-6 col-sm-6 col-5 offset-1 offset-lg-0 offset-md-0 offset-sm-0">Colocar aquí el contenido</div>
-			  <div class="col-lg-6 col-md-6 col-sm-6 col-5">Colocar aquí el contenido</div>
+			  
+			  <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-0 offset-md-0 offset-sm-0 offset-0 col-12">
+			    <form id="e0">
+					<p>Energia para orbitar.</p>
+				    <div class="form-group">
+				      <label for="h0">Altura</label>
+				      <input type="text" class="form-control" id="h0" placeholder="altura en metros.">
+					</div>
+				      
+				    <div class="form-group">
+				      <label for="m0">Password</label>
+				      <input type="text" class="form-control" id="m0" placeholder="Masa en Kg.">
+			      </div>
+					
+					 <div class="form-group">
+				      <label for="res0">La energia necesaria: (J)</label>
+				      <input type="text" class="form-control" id="res0" disabled>
+			      </div>
+				   
+				   <p class="text-center"><button class="btn btn-primary" onClick="calEt('me', 'h0', 'm0', 'res0')">Calcular.</button>
+						<button  class="btn btn-danger" onClick="Reset(e0)">Otro.</button></p> 
+			    </form>
+              </div>
+			  
+		    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				
+	
+            </div>
 		  </div>
+			
+			<br>
+			
 		  <div class="row">
-		    <div class="col-lg-6 col-md-6 col-sm-6 col-5 offset-1 offset-lg-0 offset-md-0 offset-sm-0">&nbsp;</div>
-		    <div class="col-lg-6 col-md-6 col-sm-6 col-5">&nbsp;</div>
+		    <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-0 offset-md-0 offset-sm-0 offset-0 col-12">
+			 
+            </div>
+			  
+		    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+			 
+            </div>
 	      </div>
         </div>
 		  
